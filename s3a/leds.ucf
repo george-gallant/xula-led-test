@@ -1,0 +1,18 @@
+#	xula
+
+net clk_i loc=p43;		# 12 MHz clock to FPGA.
+
+NET "clk_i" TNM_NET = "clk_i";
+TIMESPEC "TSclk_i" = PERIOD "clk_i" 12 MHz HIGH 50%;
+NET "clk_i" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# PM6 connections for LED Digits module.
+
+net s_o<0> loc=p73;
+net s_o<1> loc=p62;
+net s_o<2> loc=p94;
+net s_o<3> loc=p4;
+net s_o<4> loc=p83;
+net s_o<5> loc=p3;
+net s_o<6> loc=p84;
+net s_o<7> loc=p72;
